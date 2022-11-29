@@ -20,5 +20,13 @@ class Turn {
       return false
     }
   }
+
+  giveFeedback() {
+    if (this.guess === this.cardObj.correctAnswer) {
+      return 'Correct'
+    } else {
+      return 'Incorrect'
+    }
+  }
 }
 module.exports = Turn;
