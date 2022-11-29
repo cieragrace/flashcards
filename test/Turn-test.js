@@ -65,4 +65,24 @@ describe("Turn", function () {
 
     expect(areSame).to.be.false;
   })
+
+  it('should return correct if guess and correct answer are the same', function () {
+    let card = new Card(3, "What type of prototype method directly modifies the existing array?", ["mutator method", "accessor method", "iteration method"], "mutator method")
+    let turn = new Turn("mutator method", card)
+    let areSame = 
+
+    turn.giveFeedback()
+
+    expect(areSame).to.equal('Correct')
+  })
+
+  it('should return incorrect if guess and correct answer are not the same', function () {
+    let card = new Card(3, "What type of prototype method directly modifies the existing array?", ["mutator method", "accessor method", "iteration method"], "mutator method")
+    let turn = new Turn("accessor method", card)
+    let areSame = 
+
+    turn.giveFeedback()
+
+    expect(areSame).to.equal('Incorrect')
+  })
 })
