@@ -10,3 +10,9 @@ describe("Turn", function () {
     expect(Turn).to.be.a('function');
   });
 })
+
+it('should have a guess', function() {
+  const turn = new Turn(guess);
+  expect(turn.guess).to.deep.equal(card.correctAnswer);
+});
+
