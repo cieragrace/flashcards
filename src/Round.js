@@ -19,6 +19,7 @@ class Round {
     }
     this.turns += 1
     this.currentCard = this.deck[this.turns]
+    turn.evaluateGuess()
     return turn.giveFeedback()
   }
 }
