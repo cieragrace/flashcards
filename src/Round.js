@@ -6,6 +6,7 @@ class Round {
     this.deck = deck.cardsObjs
     this.turns = 0
     this.incorrectGuesses = []
+    this.correctPercent = 0
   }
   returnCurrentCard() {
     return this.currentCard
@@ -21,6 +22,15 @@ class Round {
     this.currentCard = this.deck[this.turns]
     turn.evaluateGuess()
     return turn.giveFeedback()
+    return correctPercent
+  }
+
+  calculatePercentCorrect() {
+    let percentCorrect = (this.turns-this.incorrectGuesses.length)/this.turns * 100 
+    return parseInt(percentCorrect.toFixed(0))
+    // this.correctPercent = roundedPercent
+    // console.log("inMethod", this.correctPercent)
+    // return percentCorrect.toFixed(0)
   }
 }
 
