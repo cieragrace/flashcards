@@ -111,3 +111,25 @@ describe('Round', function() {
     
     expect(turn.giveFeedback()).to.equal("Incorrect")
   })
+
+  it('should calculate and return percentage of correct guesses', function () {
+    const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
+    const card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
+    const deck = new Deck([card1, card2, card3])
+    let round = new Round(deck)
+    let turn = new Turn('sea otter', card1)
+    let turn2 = new Turn('spleen', card2)
+    let turn3 = new Turn('listening to music', card3)
+
+    round.takeTurn(turn.guess)
+    round.calculatePercentCorrect()
+    expect(round.calculatePercentCorrect()).to.equal(100) 
+
+    round.takeTurn(turn.guess)
+    round.calculatePercentCorrect()
+
+    expect(round.calculatePercentCorrect()).to.equal(50)
+  })
+
+
