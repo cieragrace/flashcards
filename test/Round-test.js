@@ -66,7 +66,6 @@ describe('Round', function() {
     const deck = new Deck([card1, card2, card3])
     let round = new Round(deck)
     let turn = new Turn('capybara', card1)
-    console.log(round)
     round.takeTurn(turn.guess)
 
 
@@ -130,6 +129,28 @@ describe('Round', function() {
     round.calculatePercentCorrect()
 
     expect(round.calculatePercentCorrect()).to.equal(50)
+  })
+
+  it('should return end of round statement', function () {
+    const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
+    const card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
+    const deck = new Deck([card1, card2, card3])
+    let round = new Round(deck)
+    let turn = new Turn('sea otter', card1)
+    let turn2 = new Turn('spleen', card2)
+
+    round.takeTurn(turn.guess)
+    round.calculatePercentCorrect()
+    console.log(round.correctPercent)
+    round.endRound()
+    expect(round.endRound()).to.equal("**Round over!** You answered 100% of the questions correctly!")
+
+    round.takeTurn(turn2.guess)
+    round.calculatePercentCorrect()
+    console.log(round.correctPercent)
+    round.endRound()
+    expect(round.endRound()).to.equal("**Round over!** You answered 50% of the questions correctly!")
   })
 
 
