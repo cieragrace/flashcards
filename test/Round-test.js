@@ -3,14 +3,11 @@ const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 const expect = chai.expect;
 const Turn = require('../src/Turn');
+
 const Round = require('../src/Round');
 
 
 describe('Round', function() {
-//   let card1;
-//   let card2;
-// beforeEach(() =>{
-// card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter')
 })
   it('should be a function', function() {
     expect(Round).to.be.a('function');
@@ -142,13 +139,11 @@ describe('Round', function() {
 
     round.takeTurn(turn.guess)
     round.calculatePercentCorrect()
-    console.log(round.correctPercent)
     round.endRound()
     expect(round.endRound()).to.equal("**Round over!** You answered 100% of the questions correctly!")
 
     round.takeTurn(turn2.guess)
     round.calculatePercentCorrect()
-    console.log(round.correctPercent)
     round.endRound()
     expect(round.endRound()).to.equal("**Round over!** You answered 50% of the questions correctly!")
   })
