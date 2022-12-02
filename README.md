@@ -29,3 +29,8 @@ Running node index.js from the root of your project should result in the followi
 
 Your project is running...
 Note that you will not need to you run your server until you are instantiating your Game class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via npm test.
+
+## ProjectBoard
+![image](https://user-images.githubusercontent.com/113853138/205193189-cddef4a0-97dc-4eb1-b60c-1da807c66d2b.png)
+
+Note that you will not need to you run your server until you are instantiating your Game class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via npm test.
