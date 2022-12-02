@@ -22,7 +22,7 @@ class Round {
     this.currentCard = this.deck[this.turns]
     turn.evaluateGuess()
     return turn.giveFeedback()
-    return correctPercent
+    // return correctPercent
   }
 
   calculatePercentCorrect() {
@@ -31,6 +31,7 @@ class Round {
   }
 
   endRound() {
+    console.log(`**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`)
     return `**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`
   }
 }
