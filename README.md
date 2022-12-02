@@ -4,6 +4,8 @@
 Test your knowledge with Flashcards! This app will generate through a selection on trivia questions along with multiple choice answers for each. Take your pick and the the app will tell you if you got the answer correct or in correct. Once you make it to through the final question the app will let you know your correct answer percentage. Try to get a better score the next time!
 
 ## Preview
+![image](https://user-images.githubusercontent.com/113853138/205189906-c70e9adf-b70e-46c0-ad6c-dd85714a8536.png)
+
 
 ## Technology used
 - JavaScript
