@@ -4,7 +4,7 @@ class Deck {
     this.cardsObjs = cardsObjs
   }
   countCards() {
-  this.cardsObjs.length  
+  return this.cardsObjs.length  
   }
 }
 module.exports = Deck;
